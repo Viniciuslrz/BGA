@@ -2,6 +2,7 @@
   "name": "brodin_game_awards",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://viniciuslrz.github.io/BGA",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
