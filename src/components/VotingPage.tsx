@@ -55,7 +55,7 @@ export const VotingPage = ({
           >
             <img
               className="w-10 h-10"
-              src={`/assets/GameIcons/${game.name.replace(/ /g, "")}.png`}
+              src={`https://raw.githubusercontent.com/Viniciuslrz/BGA/refs/heads/githubpages/public/assets/GameIcons/${game.name.replace(/ /g, "")}.png`}
               alt={game.name}
             />
             <p>{game.name}</p>
