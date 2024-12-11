@@ -11,6 +11,5 @@ export const FogoDePalhaDoAno:Game[] =[
     {id: 7, name:"Monster Hunter Rise", check: false, category:"Fogo de Palha do Ano"},
     {id: 7, name:"Monster Hunter Wilds", check: false, category:"Fogo de Palha do Ano"},
     {id: 8, name:"Pokemon GO", check: false, category:"Fogo de Palha do Ano"},
-    {id: 9, name:"Pokemon TCG", check: false, category:"Fogo de Palha do Ano"},
-    {id: 10, name:"Project Winter", check: false, category:"Fogo de Palha do Ano"}
+    {id: 9, name:"Pokemon TCG", check: false, category:"Fogo de Palha do Ano"}
 ];
