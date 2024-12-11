@@ -12,6 +12,8 @@ type AggregatedResults = {
 export const ResultsPage = () => {
   const [results, setResults] = useState<AggregatedResults[]>([]);
 
+  const categoryOrder = ["Fogo de Palha do Ano", "Tocha Olímpica", "Jogo que Uniu Todas as Tribos"];
+
   useEffect(() => {
     // Set up real-time listener
     const unsubscribe = onSnapshot(collection(db, "votes"), (snapshot) => {
@@ -30,11 +32,15 @@ export const ResultsPage = () => {
         });
       });
 
-      const aggregatedResults: AggregatedResults[] = Object.entries(votesByCategory).map(
+      let aggregatedResults: AggregatedResults[] = Object.entries(votesByCategory).map(
         ([category, games]) => ({
           category,
           games: Object.entries(games).map(([name, votes]) => ({ name, votes })),
         })
+      );
+
+      aggregatedResults = aggregatedResults.sort(
+        (a, b) => categoryOrder.indexOf(a.category) - categoryOrder.indexOf(b.category)
       );
 
       setResults(aggregatedResults);
