@@ -70,7 +70,8 @@ const page = () => {
         <div className="flex space-x-2 mx-auto my-2">
           {pageCounter==0&&<CustomButton activeColor="green" label="Começar" onClick={()=>handleNextPage(pageCounter)}/>}
           {pageCounter<4&&pageCounter>0&&<CustomButton activeColor="green" label="Avançar" onClick={catchError}/>}
-          {pageCounter==4&&<CustomButton activeColor="green" label="Resultados" onClick={() => setpageCounter(5)}/>}
+          {pageCounter<4&&pageCounter>0&&<CustomButton activeColor="blue" label="Skip Vote" onClick={() => setpageCounter(pageCounter+1)}/>}
+          <CustomButton activeColor="green" label="Resultados" onClick={() => setpageCounter(5)}/>
         </div>
       </div>
     </div>
