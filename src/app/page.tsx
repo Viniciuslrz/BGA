@@ -71,7 +71,7 @@ const page = () => {
           {pageCounter==0&&<CustomButton activeColor="green" label="Começar" onClick={()=>handleNextPage(pageCounter)}/>}
           {pageCounter<4&&pageCounter>0&&<CustomButton activeColor="yellow" label="Pular Voto" onClick={() => setpageCounter(pageCounter + 1)}/>}
           {pageCounter<4&&pageCounter>0&&<CustomButton activeColor="green" label="Confirmar Voto" onClick={catchError}/>}
-          {pageCounter<5&&<CustomButton activeColor="blue" label="Ver Resultados" onClick={() => setpageCounter(5)}/>}
+          {pageCounter==0||pageCounter==4&&<CustomButton activeColor="blue" label="Ver Resultados" onClick={() => setpageCounter(5)}/>}
         </div>
       </div>
     </div>
